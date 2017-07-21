@@ -1,21 +1,29 @@
-<DOCTYPE html> 
-	<html>
-		<head> 
+<!DOCTYPE html> 
+<html>
+	<head> 
 		'Tic-Tac'
 		<script src="jquery-3.2.1.min.js"></script>
 		<link rel="stylesheet" href="txtcstyle.css">
-		</head>
-			<body>
-				<div class="board">
-					<div class='space' id='00'></div>
-					<div class='space' id='01'></div>
-					<div class='space' id='02'></div>
-					<div class='space' id='10'></div>
-					<div class='space' id='11'></div>
-					<div class='space' id='12'></div>
-					<div class='space' id='20'></div>
-					<div class='space' id='21'></div>
-					<div class='space' id='22'></div>
-				</div>
-			<body>
-		</html>
+	</head>
+		<body>
+			<div class="board">
+				<table>
+					<tr class='first'>
+						<td class='space lr tr' id='00'></td>
+						<td class='space lr' id='01'></td>
+						<td class='space lr br' id='02'></td>
+					</tr>
+					<tr class='second'>	
+						<td class='space tr' id='10'></td>
+						<td class='space tr br lr rr' id='11'></td>
+						<td class='space br' id='12'></td>
+					</tr>
+					<tr class 'third'>
+						<td class='space rr tr' id='20'></td>
+						<td class='space rr' id='21'></td>
+						<td class='space rr br' id='22'></td>
+					</tr>
+				</table>
+			</div>
+		<body>
+	</html>

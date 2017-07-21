@@ -1,57 +1,26 @@
 .board{
 width: 165px;
 height:165px;
+background-color:grey;
 }
 
 .space{
 height:50px;
 width: 50px;
-border-width:5px;
 }
 
-#00{
-border-style-right:solid;
-border-style-bottom:solid;
+.tr{
+border-style-bottom:1px solid black;
 }
 
-#01{
-border-style-right:solid;
-border-style-top:solid;
-border-style-bottom:solid;
+.br{
+border-style-top:1px solid black;
 }
 
-#02{
-border-style-right:solid;
-border-style-right:solid;
-}
-#10{
-border-style-right:solid;
-border-style-left:solid;
-border-style-bottom:solid;
+.lr{
+border-style-right:1px solid black;
 }
 
-#11{
-border-style:solid;
-}
-
-#12{
-border-style-top:solid;
-border-style-left:solid;
-border-style-right:solid;
-}
-
-#20{
-border-style-left:solid;
-border-style-bottom:solid;
-}
-
-#21{
-border-style-left:solid;
-border-style-top:solid;
-border-style-bottom:solid;
-}
-
-#22{
-border-style-left:solid;
-border-style-top:solid;
+.rr{
+border-style-left: 1px solid black;
 }
