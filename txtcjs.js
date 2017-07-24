@@ -1,31 +1,162 @@
 $(function(){
-
-//turn counter determine x or o 
-
-		var turn = 0
 	
-//on click space should insert X or O and change to next turn
+	var turn = 1
 
-		$('.space').on('click', function(e) {
-			turn ++
-				if (turn >= 9) {
-					gameOver()
-					}
-				if (turn % 2 == 0) {
-					$(this).text('X')
-					}
-				if (turn % 2 !== 0) {
-					$(this).text('O')
-					}
-			});
-
-//game over draw function restarts page
-
-		function gameOver(){
-			alert('Nobody wins. Just like the real world.')
-			window.location.reload()
+	$('.space').one('click', function(e) {
+		turn++
+		if(turn == 10){
+			gameOver()
 			}
+		else if(turn % 2 == 0){
+			$(this).text('X')
+			checkWinX()
+			}
+		else if(turn % 2 !==0){
+			$(this).text('O'
+			checkWinO()
+			}
+		});
+	});
 
-//check if game ended and alert winner
+	function checkWinX(){
+		if($('#00').text() !=='' 
+			&& $('#00').text() == 'X' 
+			&& $('#01').text() == 'X' 
+			&& $('#02').text() == 'X'){
+		alert('X has won!')
+		doOver()
+			})
+		}
+		else if($('#00').text() !==''
+			&& $('#00').text() == 'X' 
+			&& $('#11').text() == 'X' 
+			&& $('#22').text() == 'X'){
+		alert('X has won!')
+		doOver()
+			})
+		}
+		else if($('#00').text() !=='' 
+			&& $('#00').text() == 'X' 
+			&& $('#10').text() == 'X' 
+			&& $('#20').text() == 'X'){
+		alert('X has won!')
+		doOver()
+			})
+		}
+		else if($('#01').text() !=='' 
+			&& $('#01').text() == 'X' 
+			&& $('#11').text() == 'X' 
+			&& $('#21').text() == 'X'){
+		alert('X has won!')
+		doOver()
+			})
+		}
+		else if($('#02').text() !=='' 
+			&& $('#02').text() == 'X' 
+			&& $('#12').text() == 'X' 
+			&& $('#22').text() == 'X'){
+		alert('X has won!')
+		doOver()
+			})
+		}
+		else if($('#02').text() !=='' 
+			&& $('#02').text() == 'X' 
+			&& $('#12').text() == 'X' 
+			&& $('#22').text() == 'X'){
+		alert('X has won!')
+		doOver()
+			})
+		}
+		else if($('#10').text() !=='' 
+			&& $('#10').text() == 'X' 
+			&& $('#11').text() == 'X' 
+			&& $('#12').text() == 'X'){
+		alert('X has won!')
+		doOver()
+			})
+		}
+		else if($('#20').text() !=='' 
+			&& $('#20').text() == 'X' 
+			&& $('#21').text() == 'X' 
+			&& $('#22').text() == 'X'){
+		alert('X has won!')
+		doOver()
+			})
+		}
+	}
 
-		
+	function checkWinO(){
+		if($('#00').text() !=='' 
+			&& $('#00').text() == 'O' 
+			&& $('#01').text() == 'O' 
+			&& $('#02').text() == 'O'){
+		alert('O has won!')
+		doOver()
+			})
+		}
+		else if($('#00').text() !=='' 
+			&& $('#00').text() == 'O' 
+			&& $('#11').text() == 'O' 
+			&& $('#22').text() == 'O'){
+		alert('O has won!')
+		doOver()
+			})
+		}
+		else if($('#00').text() !=='' 
+			&& $('#00').text() == 'O' 
+			&& $('#10').text() == 'O' 
+			&& $('#20').text() == 'O'){
+		alert('O has won!')
+		doOver()
+			})
+		}
+		else if($('#01').text() !=='' 
+			&& $('#01').text() == 'O' 
+			&& $('#11').text() == 'O' 
+			&& $('#21').text() == 'O'){
+		alert('O has won!')
+		doOver()
+			})
+		}
+		else if($('#02').text() !=='' 
+			&& $('#02').text() == 'O' 
+			&& $('#12').text() == 'O' 
+			&& $('#22').text() == 'O'){
+		alert('O has won!')
+		doOver()
+			})
+		}
+		else if($('#02').text() !=='' 
+		&& $('#02').text() == 'O' 
+		&& $('#12').text() == 'O' 
+		&& $('#22').text() == 'O'){
+		alert('O has won!')
+		doOver()
+			})
+		}
+		else if($('#10').text() !=='' 
+			&& $('#10').text() == 'O' 
+			&& $('#11').text() == 'O' 
+			&& $('#12').text() == 'O'){
+		alert('O has won!')
+		doOver()
+			})
+		}
+		else if($('#20').text() !=='' 
+			&& $('#20').text() == 'O' 
+			&& $('#21').text() == 'O'
+			&& $('#22').text() == 'O'){
+		alert('O has won!')
+		doOver()
+			})
+		}
+	}
+
+	function gameOver(){
+		alert('Nobody wins. Try Again.')
+		window.location.reload()
+		}
+
+	function doOver(){
+	location.reload()
+	}

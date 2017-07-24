@@ -1,26 +1,43 @@
 .board{
-width: 165px;
-height:165px;
-background-color:grey;
 }
 
 .space{
-height:50px;
-width: 50px;
+	height:100px;
+	width: 100px;
+	background-color:white;
+	display:inline-block;
+	margin:auto;
+	text-align:center;
+	}
+
+table{
+	positon:fixed;
+	left:50%;
+	top:50%;
+	}
+				
+.top{
+	border-bottom: 5px solid black;
+	}
+
+.middle{
+	}
+
+.bot{
+	border-top: 5px solid black;
+	}
+
+.left{
+	border-right:5px solid black;
+	}
+
+.mid{
+	}
+
+.right{
+	border-left: 5px solid black;
 }
 
-.tr{
-border-style-bottom:1px solid black;
-}
-
-.br{
-border-style-top:1px solid black;
-}
-
-.lr{
-border-style-right:1px solid black;
-}
-
-.rr{
-border-style-left: 1px solid black;
-}
+.reset{
+	position:fixed;
+	}
